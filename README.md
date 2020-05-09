@@ -53,5 +53,9 @@ docker-compose exec python3 bash
 python -m pip list
 ```
 
+```bush:削除
+docker-compose down
+```
+
 このページを参考にさせていただきました。
 [dockerで簡易にpython3の環境を作ってみる](https://qiita.com/reflet/items/4b3f91661a54ec70a7dc)
