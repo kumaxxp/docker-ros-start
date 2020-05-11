@@ -5,7 +5,7 @@ XAUTH=/tmp/.docker.xauth
 touch $XAUTH
 xauth nlist $DISPLAY | sed -e 's/^..../ffff/' | xauth -f $XAUTH nmerge -
 
-docker run --privileged -it \
+docker run -it \
 #           -e "http_proxy=" \
 #           -e "https_proxy=" \
            --volume=$XSOCK:$XSOCK:rw \
@@ -17,7 +17,7 @@ docker run --privileged -it \
            --env=TERM=xterm-256color \
            --env=QT_X11_NO_MITSHM=1 \
            --net=host \
-	   -v="/tmp/.gazebo/:/root/.gazebo/" --name my-ros-running-app my-ros-gazebo-app \
+    	   -v="/tmp/.gazebo/:/root/.gazebo/" --name my-ros-running-app my-ros-gazebo-app \
            bash
 
 

@@ -1,4 +1,5 @@
 # https://github.com/osrf/docker_images
+FROM ubuntu:18.04
 
 #FROM amd64/ros:dashing
 FROM gazebo:gzserver8

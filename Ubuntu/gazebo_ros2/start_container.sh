@@ -16,8 +16,9 @@ docker run --privileged -it \
            --env="DISPLAY=${DISPLAY}" \
            --env=TERM=xterm-256color \
            --env=QT_X11_NO_MITSHM=1 \
+           -u "ros2" \
            --net=host \
-	   -v="/tmp/.gazebo/:/root/.gazebo/" --name my-running-app my-gazebo-app \
+	       -v="/tmp/.gazebo/:/root/.gazebo/" --name my-running-app my-gazebo-app \
            bash
 
 
