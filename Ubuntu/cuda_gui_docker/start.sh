@@ -23,3 +23,20 @@ docker run --gpus all --privileged --rm -it \
 # sudo apt install x11-apps
 # xeyes
 # で、画面に表示されることを確認した。
+
+# sudo apt update
+# sudo apt install python3.7
+# sudo apt install python3-pip
+
+
+# python -m pip install numpy
+# python -m pip install pandas
+# python -m pip install matplotlib
+# python -m pip install networkx
+# python -m pip install pyyaml
+# python -m pip install xlsxwriter
+# python -m pip install tornado
+
+# sudo apt install locales
+# sudo locale-gen en_US.UTF-8
+# export LC_ALL=en_US.UTF-8
