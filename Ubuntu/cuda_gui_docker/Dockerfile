@@ -28,6 +28,21 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         software-properties-common \
         xsel \
         xdg-user-dirs \
+        python3-pip \
+        python3.7 \
+        locales \
         && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
+
+# set locale
+RUN locale-gen en_US.UTF-8  
+ENV LANG en_US.UTF-8  
+ENV LANGUAGE en_US:en  
+ENV LC_ALL en_US.UTF-8
+
+RUN sudo pip3 install numpy \
+        pandas \
+        matplotlib \
+        networkx
+ 
